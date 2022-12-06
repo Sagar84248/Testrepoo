@@ -3,11 +3,14 @@ steps:
   displayName: 'Build an image'
   inputs:
     dockerFile: Dockerfile
-
-- task: Docker@0
-  displayName: 'Push an image'
+    
+- task: AmazonWebServices.aws-vsts-tools.ECRPushImage.ECRPushImage@1
+  displayName: 'Push Image: '
   inputs:
-    action: 'Push an image'
+    awsCredentials: 'AWS Service Connection'
+    regionName: 'us-east-1'
+    sourceImageName: 'public.ecr.aws/h9y3f4f0/aws-handlebar-ecr'
+    repositoryName: 'aws-handlebar-ecr'
  
 - task: NodeTool@0
   displayName: 'Use Node 6.x'
