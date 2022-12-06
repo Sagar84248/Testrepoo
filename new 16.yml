@@ -5,15 +5,12 @@ steps:
     dockerFile: Dockerfile
     
 - task: AmazonWebServices.aws-vsts-tools.ECRPushImage.ECRPushImage@1
-  displayName: 'Push Image:'
+  displayName: 'Push Image: '
   inputs:
-        awsCredentials: 'AWS Service Connection'
-        regionName: $(AWS_REGION)
-        imageSource: 'imagename'
-        sourceImageName: $(DOCKER_REPOSITORY_NAME)
-        sourceImageTag: $(Build.BuildId)
-        pushTag: latest
-        repositoryName: $(DOCKER_REPOSITORY_NAME)
+    awsCredentials: 'AWS Service Connection'
+    regionName: 'us-east-1'
+    repositoryName: 'aws-handlebar-ecr'
+    outputVariable: '631257188280.dkr.ecr.us-east-1.amazonaws.com/aws-handlebar-ecr'
  
 - task: NodeTool@0
   displayName: 'Use Node 6.x'
