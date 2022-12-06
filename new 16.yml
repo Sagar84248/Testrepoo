@@ -9,7 +9,7 @@ steps:
   inputs:
     awsCredentials: 'AWS Service Connection'
     regionName: 'us-east-1'
-    sourceImageName: 'public.ecr.aws/h9y3f4f0/aws-handlebar-ecr'
+    sourceImageName: 'aws-handlebar-ecr'
     repositoryName: 'aws-handlebar-ecr'
  
 - task: NodeTool@0
