@@ -8,12 +8,12 @@ steps:
   displayName: 'Push Image: '
   inputs:
     awsCredentials: 'AWS Service Connection'
-        regionName: 'us-east-1'
-        imageSource: 'imagename'
-        sourceImageName: 'aws-handlebar-ecr'
-        sourceImageTag: 'latest'
-        pushTag: latest
-        repositoryName: 'aws-handlebar-ecr'
+    regionName: 'us-east-1'
+    imageSource: 'imagename'
+    sourceImageName: 'aws-handlebar-ecr'
+    sourceImageTag: 'latest'
+    pushTag: latest
+    repositoryName: 'aws-handlebar-ecr'
  
 - task: NodeTool@0
   displayName: 'Use Node 6.x'
