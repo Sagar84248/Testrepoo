@@ -9,9 +9,8 @@ steps:
   inputs:
     awsCredentials: 'AWS Service Connection'
     regionName: 'us-east-1'
-    imageSource: 'imagename'
-    sourceImageName: 'aws-handlebar-ecr'
-    sourceImageTag: 'latest'
+    sourceImageName: 'sagar84248/testrepoo'
+    sourceImageTag: '464'
     pushTag: latest
     repositoryName: 'aws-handlebar-ecr'
  
